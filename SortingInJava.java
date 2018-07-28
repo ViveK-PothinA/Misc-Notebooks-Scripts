@@ -157,9 +157,26 @@ public class SortingInJava{
     public static void main(String args[]){
         
         System.out.println(args.length);
+        if(args.length!=0){
+            for(String s:args){
+                System.out.print(s+"  ");
+            }
+        }
+        System.out.println("");
 
+        int[] array;
         // For sorting ....
-        int[] array = {53,21,63,32,54,64,62,33,72,66};
+        if(args.length!=0){
+            int i=0; 
+            array = new int[args.length];
+            for(String s: args){
+                array[i] = Integer.parseInt(s);
+                i = i+1;
+            }
+        }
+        else{
+            array = new int[]{53,21,63,32,54,64,62,33,72,66};
+        }
 
         // Inversion Count
         // System.out.println("InversionCount: "+ new SortingInJava().inversionCount(array));
