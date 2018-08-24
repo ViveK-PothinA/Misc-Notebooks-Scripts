@@ -46,7 +46,7 @@ app.get("/", (_req, res) =>
 var data = {};
 
 app.post("/signup", function(req, res){
-    // console.log(req.body);
+    
     if(!req.body.hasOwnProperty('email') && !req.body.hasOwnProperty('username') && !req.body.hasOwnProperty('password')){
         res.status(409).send(`<span>Invalid Request, try again!</span>`);
     }
@@ -69,7 +69,6 @@ app.post("/signup", function(req, res){
     // Storing in the database, in this case, a simple dictionary
     data[email] = {'username': username, 'password':password};
 
-    console.log(data);
     res.status(200).send(`<span>Registration Successful!</span>`);
 });
 
