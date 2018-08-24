@@ -1,0 +1,15 @@
+{
+  "name": "basic_auth",
+  "version": "1.0.0",
+  "description": "APIs for basic authentication like login, signup, reset password",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Pothina",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}
