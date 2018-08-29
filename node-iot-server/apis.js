@@ -69,4 +69,9 @@ app.post("/updateDevice", function(req, res){
     console.log(data);
 });
 
+app.get("/getStatus/:device", function(_req, res) {
+  res.status(200).send(data[device]);
+  console.log(data, " ", data[device]);
+});
+
 app.listen(process.env.PORT || 5000, () => console.log("API is listening on port 5000!"));
